@@ -30,4 +30,18 @@
         <page-encoding>UTF-8</page-encoding>
     </jsp-property-group>
 </jsp-config>
+
+ <filter>
+    <filter-name>noCacheFilter</filter-name>
+    <filter-class>com.bhumata.util.NoBrowserCacheFilter</filter-class>
+ </filter>
+ <filter-mapping>
+  <filter-name>noCacheFilter</filter-name>
+  <url-pattern>/showHome</url-pattern>
+  <url-pattern>/UserLogin</url-pattern>
+  <url-pattern>/UserSignUp</url-pattern>
+ </filter-mapping>
+  
+
+
 </web-app>

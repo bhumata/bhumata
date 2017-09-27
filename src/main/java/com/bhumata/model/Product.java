@@ -16,6 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class Product implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(nullable=false,unique = true)
@@ -158,6 +159,10 @@ public class Product implements Serializable {
 	public Product() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+	public String getmyStringArray() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 

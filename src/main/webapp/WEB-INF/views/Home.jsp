@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,16 +16,27 @@
   <link href="css/header.css" rel="stylesheet">
                                                        
    <link href="css/style.css" rel="stylesheet">
- 
+<<<<<<< HEAD
+  <link href="css/style1.css" rel="stylesheet" type="text/css" media="all" />	
 
+=======
+>>>>>>> branch 'master' of https://github.com/bhumata/bhumata.git
         
     
 <title>Bhumata</title>
 <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
 <style type="text/css">
-h1,h2,h3,h4,h5,h6{
-margin:0;
-padding:0;
+
+
+.group
+{
+border: none;
+	outline: 0;
+	font-size: 0.9em;
+	color: #fff;
+	background: #07980e;
+	width: 100%;
+
 }
 
 </style>
@@ -32,7 +44,11 @@ padding:0;
 </head>
 <body >
 
-<nav class="navbar navbar-default navbar-fix-top topnav" >
+<<<<<<< HEAD
+<!-- <nav class="navbar navbar-default navbar-fix-top topnav" >
+=======
+<%-- <nav class="navbar navbar-default navbar-fix-top topnav" >
+>>>>>>> branch 'master' of https://github.com/bhumata/bhumata.git
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -52,25 +68,111 @@ padding:0;
        <ul class="nav navbar-nav navbar-right">
        <li class="upper-links"><a  href="FarmerLogin">Farmer</a></li>
                 <li class="upper-links"><a class="glyphicon glyphicon-map-marker" href="https://campusbox.org/">Wakad</a></li>
-         <li class="dropdown">
-          <a href="saveLogin"><b>Login</b></a>
-			
+     <c:choose>
+    <c:when test="${sessionScope.user!=null}">
+       <li class="dropdown">
+          <a href="LogoutUser"><b>Logout</b></a>	
         </li>
+    </c:when>    
+    <c:otherwise> 
+         <li class="dropdown">
+          <a href="UserLogin"><b>Login</b></a>
+        </li>
+        </c:otherwise>
+</c:choose>	
+        
           <li><a href="#">Help</a></li>
        
       </ul>
     </div>
   </div>
+  
+  
+  
+  
+  
 </nav>
-
+<<<<<<< HEAD
+ -->
+ 
+ <div class="top_bg">
+	<div class="container">
+		<div class="header_top-sec">
+			<div class="top_right">
+				<ul>
+					<li><select class="group">
+							  <option><font size="8">English</font></option>
+							  <option><font size="8">Marathi</font></option>
+							  
+							</select></li> |
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+			<div class="top_left">
+				<ul>
+					<li class="top_link"><a href="#">Farmer</a></li>	
+					<li class="top_link"><a href="#"  >Login</a>
+						<span>or</span><a  href="#"  >Signup</a></li>|
+					<li class="top_link"><a href="#">My Account</a></li>					
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!-- top-header -->
+<!-- logo-cart -->
+<div class="header_top" style="background-color:#fff;">
+	<div class="container">
+		<div class="logo">
+		 	<a href="index.html">BHUMATA</a>			 
+		</div>
+		<div class="search" style="margin-left:40px; border:1px solid  #07980e;">
+				 <form name="form1" action="showFilterproduct">
+					<input type="text" name="pname" placeholder="Search..." >
+					<input type="submit" value="">
+					</form>
+			</div>
+		<div class="header_right">
+			<div class="cart box_1">
+				<a href="checkout.html">
+				<div class="total">
+				 <span id="simpleCart_quantity" class="simpleCart_quantity"></span> items</div>
+					<img src="images/image/cart1.png" alt=""/>
+				</a>
+				<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+				<div class="clearfix"> </div>
+			</div>				 
+		</div>
+		<div class="clearfix"></div>	
+	</div>
+</div>
+<script src="js/simpleCart.min.js"> </script>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+=======
+ --%>
+ <jsp:include page="Head.jsp"/>
+>>>>>>> branch 'master' of https://github.com/bhumata/bhumata.git
 <jsp:include page="DropDown.jsp"/>
 
  <div class="intro-header" style="background-image: url('images/img1.png');">
-        <div class="container">
+         <div class="container">
 
             <div class="row">
                 <div class="col-lg-12">
-                 <div class="intro-message">
+                 <div class="intro-message"> 
                         <h1>Farming</h1>
                         </div>
                 </div>
@@ -128,7 +230,7 @@ padding:0;
         <div class="container" >
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="margin-top-0 text-primary">DivaStays For All Your Needs</h2>
+                    <h2 class="margin-top-0 text-primary"> For All Your Needs</h2>
                 </div>
             </div>
         </div>
@@ -319,7 +421,6 @@ padding:0;
               
 </section>
     
-
-
+<jsp:include page="Footer.jsp"/>
 </body>
 </html>

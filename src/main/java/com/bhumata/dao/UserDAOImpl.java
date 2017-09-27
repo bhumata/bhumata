@@ -60,7 +60,28 @@ public class UserDAOImpl implements UserDAO {
 		}
 	}
 	
+	public User checkLogin(User user) {
+		Session session=sessionFactory.openSession();
+		Criteria crit=session.createCriteria(User.class);
+		Criterion c1=Restrictions.eq("email",user.getEmail());
+		Criterion c2=Restrictions.eq("password",user.getPassword());
+		Criterion c3=Restrictions.and(c1,c2);
+		crit.add(c3);
+		@SuppressWarnings("unchecked")
+		List<User> list=crit.list();
+		if(list.isEmpty())
+		{
+			return null;
+		}
+		else
+		{
+			user=(User)list.get(0);
+			return user;
+		}
+
+	}
 
 	
+
 
 }

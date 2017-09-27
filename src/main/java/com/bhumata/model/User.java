@@ -29,7 +29,7 @@ public class User implements Serializable {
 	@Column(nullable=false,length=30,unique = true)
 	private String email;
 	@Column(nullable=false,length=20)
-	private String pwd1;
+	private String password;
 	public Long getUid() {
 		return Uid;
 	}
@@ -60,11 +60,11 @@ public class User implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPwd1() {
-		return pwd1;
+	public String getPassword() {
+		return password;
 	}
-	public void setPwd1(String pwd1) {
-		this.pwd1 = pwd1;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
@@ -78,7 +78,7 @@ public class User implements Serializable {
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result + ((fname == null) ? 0 : fname.hashCode());
 		result = prime * result + ((lname == null) ? 0 : lname.hashCode());
-		result = prime * result + ((pwd1 == null) ? 0 : pwd1.hashCode());
+		result = prime * result + ((password == null) ? 0 : password.hashCode());
 		return result;
 	}
 	@Override
@@ -115,29 +115,29 @@ public class User implements Serializable {
 				return false;
 		} else if (!lname.equals(other.lname))
 			return false;
-		if (pwd1 == null) {
-			if (other.pwd1 != null)
+		if (password == null) {
+			if (other.password != null)
 				return false;
-		} else if (!pwd1.equals(other.pwd1))
+		} else if (!password.equals(other.password))
 			return false;
 		return true;
 	}
 	@Override
 	public String toString() {
 		return "User [Uid=" + Uid + ", fname=" + fname + ", lname=" + lname + ", contact=" + contact + ", email="
-				+ email + ", pwd1=" + pwd1 + ", getUid()=" + getUid() + ", getFname()=" + getFname() + ", getLname()="
-				+ getLname() + ", getContact()=" + getContact() + ", getEmail()=" + getEmail() + ", getPwd1()="
-				+ getPwd1() + ", hashCode()=" + hashCode() + ", getClass()=" + getClass() + ", toString()="
+				+ email + ", password=" + password + ", getUid()=" + getUid() + ", getFname()=" + getFname() + ", getLname()="
+				+ getLname() + ", getContact()=" + getContact() + ", getEmail()=" + getEmail() + ", getPassword()="
+				+ getPassword() + ", hashCode()=" + hashCode() + ", getClass()=" + getClass() + ", toString()="
 				+ super.toString() + "]";
 	}
-	public User(Long uid, String fname, String lname, Long contact, String email, String pwd1) {
+	public User(Long uid, String fname, String lname, Long contact, String email, String password) {
 		super();
 		Uid = uid;
 		this.fname = fname;
 		this.lname = lname;
 		this.contact = contact;
 		this.email = email;
-		this.pwd1 = pwd1;
+		this.password = password;
 	}
 	public User() {
 		super();

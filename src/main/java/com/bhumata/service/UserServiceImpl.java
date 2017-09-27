@@ -23,5 +23,9 @@ public class UserServiceImpl implements UserService {
 		return userDAO.checkContactNumber(user);
 	}
 	
+	public User checkLogin(User user) {
+		return userDAO.checkLogin(user);
+	}
+	
 	
 }

@@ -5,18 +5,20 @@ function CheckFName()
   	 
 	
  	 if(fname.value == "")
- 	 {
+ 	{
  		 document.getElementById("errorMessage1").innerHTML="Please Fill Out this field ";
-         document.getElementById("errorMessage1").style.display = "block";
-         document.getElementById("fname").style.borderColor="#FF0000";
+          document.getElementById("errorMessage1").style.display = "block";
+          document.getElementById("fname").style.borderColor="#FF0000";
   		 form.fname.focus();
-  	 	 return false;
- 	 }
+  	 	return false;
+		}
  	 else
- 	 {
- 		 document.getElementById("fname").style.borderColor="#000000";
+ 		 {
+ 		document.getElementById("fname").style.borderColor="#000000";
+ 		 
  		 document.getElementById("errorMessage1").innerHTML="";
- 	 } 
+ 		 
+ 		 } 
 	
   	 re = /^[a-zA-Z]*$/;
 	 if(!re.test(fname.value))
@@ -26,12 +28,15 @@ function CheckFName()
          document.getElementById("fname").style.borderColor="#FF0000";
   		 form.fname.focus();
   		 return false;
-	 }
+		 }
 	 else
-	 {
-		 document.getElementById("fname").style.borderColor="#000000";
+		 {
+		 
+document.getElementById("fname").style.borderColor="#000000";
+  		 
   		 document.getElementById("errorMessage1").innerHTML="";
-	 }
+		 
+		 }
   	 
 }
 
@@ -40,33 +45,33 @@ function CheckLName()
 {
 	 var lname = document.getElementById('lname');
  	 if(lname.value == "")
- 	 {
- 		 document.getElementById("errorMessage2").innerHTML="Please Fill Out this field ";
-         document.getElementById("errorMessage2").style.display = "block";
-         document.getElementById("lname").style.borderColor="#FF0000";
-  		 form.lname.focus();
-  	 	 return false;
- 	 }
+ 		{
+ 		 	document.getElementById("errorMessage2").innerHTML="Please Fill Out this field ";
+         	document.getElementById("errorMessage2").style.display = "block";
+          	document.getElementById("lname").style.borderColor="#FF0000";
+  		 	form.lname.focus();
+  	 		return false;
+		}
  	 else
- 	 {
- 		 document.getElementById("lname").style.borderColor="#000000";
- 		 document.getElementById("errorMessage2").innerHTML="";
- 	 }
+ 		{
+ 			document.getElementById("lname").style.borderColor="#000000";
+ 		 	document.getElementById("errorMessage2").innerHTML="";
+ 		}
     	 
-  	re = /^[a-zA-Z]*$/;
-	if(!re.test(lname.value))
-	{
-		 document.getElementById("errorMessage2").innerHTML="Please Enter Only Characters";
-		 document.getElementById("errorMessage2").style.display = "block";
-         document.getElementById("lname").style.borderColor="#FF0000";
-  		 form.lname.focus();
-  		 return false;
-	}
-	else
-	{
-		 document.getElementById("lname").style.borderColor="#000000";
-  		 document.getElementById("errorMessage2").innerHTML="";
-	}
+  		 re = /^[a-zA-Z]*$/;
+	 	if(!re.test(lname.value))
+		 {
+		 	document.getElementById("errorMessage2").innerHTML="Please Enter Only Characters";
+        	document.getElementById("errorMessage2").style.display = "block";
+         	document.getElementById("lname").style.borderColor="#FF0000";
+  		 	form.lname.focus();
+  		 	return false;
+		 }
+	 else
+		 {
+		 	document.getElementById("lname").style.borderColor="#000000";
+  		 	document.getElementById("errorMessage2").innerHTML="";
+		 }
   	 
 }
 
@@ -76,51 +81,51 @@ function CheckContact()
 
 	var contact = document.getElementById('contact');
 	
-	if(contact.value == "")
- 	{
- 		 document.getElementById("errorMessage3").innerHTML="Please Fill Out this field ";
-         document.getElementById("errorMessage3").style.display = "block";
-         document.getElementById("contact").style.borderColor="#FF0000";
-  		 form.contact.focus();
-  	 	 return false;
-	}
- 	else
- 	{
- 		 document.getElementById("contact").style.borderColor="#000000";
- 		 document.getElementById("errorMessage3").innerHTML="";
- 	} 
+		if(contact.value == "")
+ 		{
+ 		 	document.getElementById("errorMessage3").innerHTML="Please Fill Out this field ";
+          	document.getElementById("errorMessage3").style.display = "block";
+          	document.getElementById("contact").style.borderColor="#FF0000";
+  			form.contact.focus();
+  	 		return false;
+		}
+ 	 else
+ 		{
+ 			document.getElementById("contact").style.borderColor="#000000";
+ 			document.getElementById("errorMessage3").innerHTML="";
+ 		} 
 	
-	re = /^[0-9]*$/;
-	if(!re.test(contact.value))
-	{
-		 document.getElementById("errorMessage3").innerHTML="Please Enter Only Digits";
-	     document.getElementById("errorMessage3").style.display = "block";
-	     document.getElementById("contact").style.borderColor="#FF0000";
-	     form.contact.focus();
-	  	 return false;
+		re = /^[0-9]*$/;
+		if(!re.test(contact.value))
+		{
+			 document.getElementById("errorMessage3").innerHTML="Please Enter Only Digits";
+	         document.getElementById("errorMessage3").style.display = "block";
+	         document.getElementById("contact").style.borderColor="#FF0000";
+	  		 form.contact.focus();
+	  		 return false;
 		
-	}
+		}
 	else
-	{
-		 document.getElementById("contact").style.borderColor="#000000";
-	  	 document.getElementById("errorMessage3").innerHTML="";
-	}
+		{
+			document.getElementById("contact").style.borderColor="#000000";
+	  		document.getElementById("errorMessage3").innerHTML="";
+		}
 		
 		
-	if(contact.value.length != 10) 
-	{
-		 document.getElementById("errorMessage3").innerHTML="Phone number must be 10 digits.";
-	     document.getElementById("errorMessage3").style.display = "block";
-	     document.getElementById("contact").style.borderColor="#FF0000";
-	     form.contact.focus();
-	  	 return false;
+		if(contact.value.length != 10) 
+		{
+			 document.getElementById("errorMessage3").innerHTML="Phone number must be 10 digits.";
+	         document.getElementById("errorMessage3").style.display = "block";
+	         document.getElementById("contact").style.borderColor="#FF0000";
+	  		 form.contact.focus();
+	  		 return false;
 		
-	}
+		}
 	else
-	{
-		 document.getElementById("contact").style.borderColor="#000000";
-	  	 document.getElementById("errorMessage3").innerHTML="";
-	}
+		{
+			document.getElementById("contact").style.borderColor="#000000";
+	  		document.getElementById("errorMessage3").innerHTML="";
+		}
 }
 
 
@@ -129,20 +134,22 @@ function CheckEmail()
 {
 	var email = document.getElementById('email');
 
+	
 	if(email.value == "")
  	{
  		 document.getElementById("errorMessage4").innerHTML="Please Fill Out this field ";
-         document.getElementById("errorMessage4").style.display = "block";
-         document.getElementById("email").style.borderColor="#FF0000";
+          document.getElementById("errorMessage4").style.display = "block";
+          document.getElementById("email").style.borderColor="#FF0000";
   		 form.email.focus();
-  	 	 return false;
-	}
- 	else
- 	{
- 		 document.getElementById("email").style.borderColor="#000000";
+  	 	return false;
+		}
+ 	 else
+ 		 {
+ 		document.getElementById("email").style.borderColor="#000000";
+ 		 
  		 document.getElementById("errorMessage4").innerHTML="";
  		 
- 	}
+ 		 }
 	
 	re=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 	if(!re.test(email.value))
@@ -150,8 +157,8 @@ function CheckEmail()
 		document.getElementById("errorMessage4").innerHTML=" Enter Valid Email address!";
 	 	document.getElementById("errorMessage4").style.display = "block";
 	 	document.getElementById("email").style.borderColor="#FF0000";
-		form.email.focus();
-		return false;
+			form.email.focus();
+			return false;
 	}
 	else
 	{
@@ -169,101 +176,132 @@ function CheckEmail()
 
 function CheckPassword()
 {
-	var pwd1 = document.getElementById('pwd1');
+	var password = document.getElementById('password');
 	
-	if(pwd1.value == "")
+	if(password.value == "")
  	{
+
+ 		
+
  		document.getElementById("errorMessage5").innerHTML="Please Fill Out this field ";
         document.getElementById("errorMessage5").style.display = "block";
-        document.getElementById("pwd1").style.borderColor="#FF0000";
-  		form.pwd1.focus();
+        document.getElementById("password").style.borderColor="#FF0000";
+  		form.password.focus();
   	 	return false;
-	}
-	else
- 	{
- 		document.getElementById("pwd1").style.borderColor="#000000"; 
- 		document.getElementById("errorMessage5").innerHTML="";
+
+		}
+ 	 else
  		 
- 	} 
-	
-	
-    if(pwd1.value.length < 6)
-    {
-     	document.getElementById("errorMessage5").innerHTML="Password must contain at least six characters!";
-       	document.getElementById("errorMessage5").style.display = "block";
-       	document.getElementById("pwd1").style.borderColor="#FF0000";
- 		form.pwd1.focus();
- 		return false;
-    }
-	else
-	{
-		document.getElementById("pwd1").style.borderColor="#000000";
+
+ 	{
+ 		document.getElementById("password").style.borderColor="#000000"; 
  		document.getElementById("errorMessage5").innerHTML="";
-	}
+
+ 		
+ 		 } 
 	
+	
+
+     	if(password.value.length < 6)
+     		{
+     			document.getElementById("errorMessage5").innerHTML="Password must contain at least six characters!";
+       			document.getElementById("errorMessage5").style.display = "block";
+       			document.getElementById("password").style.borderColor="#FF0000";
+ 		 		form.password.focus();
+ 		 		return false;
+     		}
+			else
+			{
+				document.getElementById("password").style.borderColor="#000000";
+ 		 		document.getElementById("errorMessage5").innerHTML="";
+			}
+
+   
 	re = /[0-9]/;
-	if(!re.test(pwd1.value))
+	if(!re.test(password.value))
 	{
 		document.getElementById("errorMessage5").innerHTML=" password must contain at least one number (0-9)!";
 		document.getElementById("errorMessage5").style.display = "block";
-		document.getElementById("pwd1").style.borderColor="#FF0000";
-	 	form.pwd1.focus();
+		document.getElementById("password").style.borderColor="#FF0000";
+	 	form.password.focus();
 	 	return false;
 	}
 	else
 	{
-		document.getElementById("pwd1").style.borderColor="#000000";
+		document.getElementById("password").style.borderColor="#000000";
 		document.getElementById("errorMessage5").innerHTML="";
 	}
+
+	
+			
 	 
-	ree = /[A-Z]/;
-    if(!ree.test(pwd1.value))
-    {
-		document.getElementById("errorMessage5").innerHTML=" password must contain at least one number (0-9)!";
-		document.getElementById("errorMessage5").style.display = "block";
-		document.getElementById("pwd1").style.borderColor="#FF0000";
-	 	form.pwd1.focus();
-	 	return false;
-	}
-	else
-	{
-		document.getElementById("pwd1").style.borderColor="#000000";
-		document.getElementById("errorMessage5").innerHTML="";
-	}
+	 		ree = /[A-Z]/;
+     		if(!ree.test(password.value))
+     		{
+				document.getElementById("errorMessage5").innerHTML=" password must contain at least one number (0-9)!";
+			 	document.getElementById("errorMessage5").style.display = "block";
+			 	document.getElementById("password").style.borderColor="#FF0000";
+	 			form.password.focus();
+	 			return false;
+			}
+			else
+			{
+				document.getElementById("password").style.borderColor="#000000";
+		 		document.getElementById("errorMessage5").innerHTML="";
+			}
+	 
+	 
+	 	 
+
+
 	 	 	 
+
 }
 
 function CheckPass()
 {
-	var pwd1 = document.getElementById('pwd1');
-    var pwd2 = document.getElementById('pwd2');
+	var password = document.getElementById('password');
+    var password2 = document.getElementById('password2');
     
-    if(pwd2.value == "")
+    if(password2.value == "")
  	{
- 		document.getElementById("errorMessage6").innerHTML="Please Fill Out this field ";
-        document.getElementById("errorMessage6").style.display = "block";
-        document.getElementById("pwd2").style.borderColor="#FF0000";
-  		form.pwd2.focus();
+
+ 		 document.getElementById("errorMessage6").innerHTML="Please Fill Out this field ";
+          document.getElementById("errorMessage6").style.display = "block";
+          document.getElementById("password2").style.borderColor="#FF0000";
+  		 form.password2.focus();
+
+ 		
+
   	 	return false;
-	}
- 	else
- 	{
- 		document.getElementById("pwd2").style.borderColor="#000000";
- 		document.getElementById("errorMessage6").innerHTML="";
- 	} 
+
+		}
+ 	 else
+ 		 {
+ 		document.getElementById("password2").style.borderColor="#000000";
+ 		 
+ 		 document.getElementById("errorMessage6").innerHTML="";
+ 		 
+ 		 } 
+	
+
     
-    if(pwd2.value != pwd1.value)
+    if(password2.value != password.value)
     {
     	document.getElementById("errorMessage7").innerHTML=" Please check that you've entered and confirmed your password!";
 	 	document.getElementById("errorMessage7").style.display = "block";
-	 	document.getElementById("pwd2").style.borderColor="#FF0000";
-		form.pwd2.focus();
-		return false;
+
+	 	document.getElementById("password2").style.borderColor="#FF0000";
+			form.password2.focus();
+			return false;
+
+	 	
     	
+		
 	}
 	else
 	{
-		document.getElementById("pwd2").style.borderColor="#000000";
+		document.getElementById("password2").style.borderColor="#000000";
  		document.getElementById("errorMessage7").innerHTML="";
 	}
 	

@@ -17,6 +17,7 @@
 
 </head>
 <body class="body-green" data-elink-extension-installed="1.1.5">
+<jsp:include page="Head.jsp"/>
 <div class="container">
 	<div class="row destacados">
 	

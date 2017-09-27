@@ -1,16 +1,20 @@
 @CHARSET "ISO-8859-1";
 
+
+
 #login-dp{
     min-width: 250px;
     padding: 14px 14px 0;
     overflow:hidden;
-    background-color:rgba(255,255,255,.8);
+     margin:0px;
+   padding:0px;
+    
 }
 #login-dp .help-block{
     font-size:12px    
 }
 #login-dp .bottom{
-    background-color:rgba(255,255,255,.8);
+    
     border-top:1px solid #ddd;
     clear:both;
     padding:14px;
@@ -30,7 +34,7 @@
 }
 .btn-fb:hover{
     color: #fff;
-    background-color:#496ebc; 
+    
 }
 .btn-tw{
     color: #fff;
@@ -42,7 +46,7 @@
 }
 @media(max-width:768px){
     #login-dp{
-        background-color: inherit;
+        
         color: #fff;
     }
     #login-dp .bottom{
@@ -80,7 +84,7 @@ a:hover, a:focus {
 }
 
 .navbar .navbar-collapse {
-        background:#1F96F4;
+        background:#ffffff;
     }
 
 .navbar-nav>li>.dropdown-menu {
@@ -99,7 +103,7 @@ a:hover, a:focus {
 }
 
 .mega-active:after {
-        background: #0087F2;
+	
         bottom: -8px;
         content: ' ';
         display: block;
@@ -192,7 +196,6 @@ a:hover, a:focus {
 }
 
 .dropdown-menu{
-background-color: #0087F2;
     border: 0px solid rgba(0,0,0,.15);
     font-size: 12px;
 }

@@ -13,6 +13,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<link href="css/footer.css" rel="stylesheet">
+  <link href="css/header.css" rel="stylesheet">
+                                                       
+   <link href="css/style.css" rel="stylesheet">
+  <link href="css/style1.css" rel="stylesheet" type="text/css" media="all" />	
+
+
 <title>Insert title here</title>
 
 <style type="text/css">
@@ -26,10 +33,9 @@ margin-top:5px;}
 select { width:225px;text-align:center; }
 select .lt { text-align:center; }
 select { text-indent: 5px; }
-<!--
 
-.item:hover { -moz-box-shadow: 0 0 40px #ccc; -webkit-box-shadow: 0 0 40px #ccc; box-shadow: 0 0 40px #ccc; }
--->
+
+/* .item:hover { -moz-box-shadow: 0 0 40px #ccc; -webkit-box-shadow: 0 0 40px #ccc; box-shadow: 0 0 40px #ccc; } */
 
 .item:focus
 
@@ -118,9 +124,9 @@ img {
     height: 320px; 
     margin: 8px;
     background:#FEFEFE; 
-    display: inline-block;
+    display: inline-block; 
     border-radius: 3px;
-    box-shadow:0 0 8px rgba(0, 0, 0, 0.06);
+    /* box-shadow:0 0 8px rgba(0, 0, 0, 0.06); */
  }
 
 h3 {
@@ -167,7 +173,7 @@ h5 {
 }
 
 .mini-menu{
-    width: 200px;
+    width: 150px;
     border-radius: 3px;
     box-shadow:0 0 8px rgba(0, 0, 0, 0.06);
     overflow: hidden;
@@ -256,6 +262,40 @@ h5 {
     border-image: initial;
 }
 
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  
+   background-color: #white; /* Green */
+    border: 1px solid green;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    cursor: pointer;
+    width: 150px;
+    display: block;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+ input[type=submit]:hover {
+    background-color: #4CAF50;
+} 
+
+.group
+{
+border: none;
+	outline: 0;
+	font-size: 0.9em;
+	color: #fff;
+	background: #07980e;
+	width: 110%;
+
+}
+
+
+
 </style>
 </head>
 <body>
@@ -273,6 +313,73 @@ h5 {
 </head>
 <body>
 
+ <div class="top_bg">
+	<div class="container">
+		<div class="header_top-sec">
+			<div class="top_right">
+				<ul>
+					<li><select class="group">
+							  <option><font size="8">English</font></option>
+							  <option><font size="8">Marathi</font></option>
+							  
+							</select></li> |
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+			<div class="top_left">
+				<ul>
+					<li class="top_link"><a href="#">Farmer</a></li>	
+					<li class="top_link"><a href="#"  >Login</a>
+						<span>or</span><a  href="#"  >Signup</a></li>|
+					<li class="top_link"><a href="#">My Account</a></li>					
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!-- top-header -->
+<!-- logo-cart -->
+<div class="header_top" style="background-color:#fff;">
+	<div class="container">
+		<div class="logo">
+		 	<a href="index.html">BHUMATA</a>			 
+		</div>
+		<div class="search" style="margin-left:40px; border:1px solid  #07980e;">
+				 <form name="form1" action="showFilterproduct">
+					<input type="text" name="pname" placeholder="Search..." >
+					<input type="submit" value="">
+					</form>
+			</div>
+		<div class="header_right">
+			<div class="cart box_1">
+				<a href="checkout.html">
+				<div class="total">
+				 <span id="simpleCart_quantity" class="simpleCart_quantity"></span> items</div>
+					<!-- <img src="images/image/cart1.png" alt=""/> -->
+				</a>
+				<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+				<div class="clearfix"> </div>
+			</div>				 
+		</div>
+		<div class="clearfix"></div>	
+	</div>
+</div>
+<script src="js/simpleCart.min.js"> </script>
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div class="wrap">
     <div class="menu">
@@ -281,77 +388,49 @@ h5 {
         <li class="sub">
         <form name="form1" action="showFilterproductCategory">
             <input type="submit" name="cname" value="Vegetables"></a>
-            <!-- <ul>
-               <li><a href="showFilterproductCategory">Vegetables</a></li>
-               <li><a href="#">cabbage,cauiliflower,broccoli</a></li>
-               <li><a href="#">cucumber and capcicum</a></li>
-               <li><a href="#">gourds,pumpkins,drumsticks</a></li>
-               <li><a href="#">leafy vegetables</a></li>
-               <li><a href="#">Peas,corn,mushrooms</a></li> 
-               <li><a href="#">root vegetables</a></li> 
-               <li><a href="#">potatoes,onions,tomatos</a></li> 
-            </ul> -->
+           </form>
        </li>
-       </form>
+       <br>
         <li class="sub">
-            <a href="#">Fresh Fruits</a>
-            <ul>
-               <li><a href="#">Banana,Sapota,Guava</a></li>
-               <li><a href="#">Melon</a></li>
-               <li><a href="#">Mango</a></li>
-               <li><a href="#">Seasonal</a></li>
-               <li><a href="#">Grapes,Berries,Cherries</a></li>
-               <li><a href="#">Papaya,Pineapple,Pomegranate</a></li>
-               <li><a href="#">Oranges,Sweet Lime and other Citrus</a></li>
-               <li><a href="#">Apples,Peaches,Pears and Plums</a></li> 
-            </ul>
+          <form name="form1" action="showFilterproductCategory">
+            <input type="submit" name="cname" value="Fruits"></a> 
+       
+           <!--   <a href="showFilterproductCategory">Fresh Fruits</a> -->
+          </form> 
         </li>
+        <br>
         <li class="sub">
-            <a href="#">SEEDS</a>
-            <ul>
-                <li><a href="#">aaa</a></li>
-               <li><a href="#">bbb</a></li>
-               <li><a href="#">ccc</a></li>
-               <li><a href="#">ddd</a></li>
-               <li><a href="#">eee</a></li>
-               <li><a href="#">fff</a></li> 
-            </ul>
+        <form name="form1" action="showFilterproductCategory">
+            <input type="submit" name="cname" value="Seeds"></a> 
+        
+            <!-- <a href="#">SEEDS</a> -->
+            </form>
         </li>
+        <br>
         <li class="sub">
-            <a href="#">DRY-FRUITS</a>
-            <ul>
-            <li><a href="#">Almond</a></li>
-               <li><a href="#">Cashew Nut</a></li>
-               <li><a href="#">Dates</a></li>
-               <li><a href="#">Dried fig</a></li>
-               <li><a href="#">Raisin</a></li>
-               <li><a href="#">Walnut</a></li> 
-            </ul>
+        <form name="form1" action="showFilterproductCategory">
+            <input type="submit" name="cname" value="DryFruits"></a> 
+        
+             <!-- <a href="#">DRY-FRUITS</a> -->
+            </form>
         </li>
+        <br>
+        <li class="sub">
+        <form name="form1" action="showFilterproductCategory">
+            <input type="submit" name="cname" value="Cereals"></a> 
+        
+           <!--  <a href="#">Cereals</a>
+             -->
+             </form>
+        </li>
+        
     </ul>
         </div>
         
         <div class="menu-colors menu-item">
             <div class="header-item" >Quantity</div>
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+         
         </div>
         <div class="menu-price menu-item">
             <div class="header-item" >Price</div>
@@ -363,52 +442,69 @@ h5 {
         </div>
         
     </div>
-
-        <c:forEach items="${product}" var="product">
-  <div class="items">
+  <!--  <div class="items">  -->
   
-        <div data-price="160" class="item">
-          <img src="<ui:image img='${product.productImg}'></ui:image>" alt="Image" />
-           <!--  <img src="images/image/rose.jpg" alt="apple" class="img-item"></img> -->
-                <div class="info">
-                	 <p class="descroption">Fresho</p>
-                    <h3>${product.productName }</h3>
-                    
-                    <h5>Price:${product.price}</h5>
-                    </c:forEach>
-                     <select name="os0" id="os0">
+        <div data-price="160" class="item">  
+ 
+
+
+<table>
+
+        <c:forEach items="${product}" var="product" varStatus="rowCounter">
+       
+        <c:if test="${rowCounter.count % 4 == 1}">
+   
+        <tr>
+        </c:if>
+        
+         <td><br> <img src="<ui:image img='${product.productImg}'></ui:image>" alt="Image" /> <br/> ${rowCounter.count}<br><h3>${product.productName }</h3>
+         
+         <h5>Price:${product.price}</h5> 
+         
+         <select name="os0" id="os0">
             <option value="1000">(1kg. approx 6,7 nos. Rs.160)</option>
             <option value="250">250gm. approx 2,3 nos. Rs.40</option>
             <option value="500">500gm. approx 4,5 nos. Rs.80</option>
             <option value="1000">1kg. approx 6,7 nos. Rs.160</option>
         </select>
+         
+           
         
-	
-        
-         <div class="aa">
-          
-         <table><tr><td>
+   
          Qty:<input type="text" name="qty" style="width: 40px;">
-         </td>
-         <td>
+        
          	<button class="btn" qa="add" type="button" style="margin-left: 50px;">
          	
          	<strong style=" text-shadow: 1px 1px #fff;">Add to Cart </strong>
-         	</button></td></tr>
+         	</button>
+         	
+         </td>
+         <c:if test="${rowCounter.count % 4 == 1||rowCounter.count == 4}">
+         
+         </c:if>
+         
+          
+       
+           
+                
+         	
+         </c:forEach>
          	</table>
+         	</div>
          
          	</div>
          	
-                </div>
-        </div>
+                
+                
+        
    
     
-        </div>    
+        <!-- </div>    
           
-        </div>
+        </div> -->
   
   
- <button class="loadmore">Load More</button>
+<!--  <button class="loadmore">Load More</button> -->
     
 </body>
 

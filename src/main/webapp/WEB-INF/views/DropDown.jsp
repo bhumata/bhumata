@@ -67,7 +67,7 @@ padding:0;
 }
 .mega-dropdown-menu {
     padding: 10px 0px;
-    width: 100%;
+    width: 10%;
     box-shadow: none;
     -webkit-box-shadow: none;
 }
@@ -89,7 +89,7 @@ padding:0;
 }
 .mega-dropdown-menu > li ul > li > a:hover,
 .mega-dropdown-menu > li ul > li > a:focus {
-  text-decoration: underline;
+   text-decoration: underline; 
   color: #000000;
   background-color: ;
 }
@@ -132,22 +132,59 @@ background-color:#F0F0F0;
 
 
 .dropdown-menu-2{
-left: 9%;
+left:-8%;
 }
-.dropdown-menu-3{
+
+.dropdown-menu-12{
+left: 10%;
+}
+
+.dropdown-menu-13{
+left: 44%;
+}
+
+.dropdown-menu-14{
 left: 28%;
 }
-
-.dropdown-menu-4{
-left: 45%;
+.dropdown-menu-15{
+left: 62%;
 }
+
+.dropdown-menu-16{
+left: 79%;
+}
+
+
+
+
+
+
 
 .mega-dropdown-menu-2c {
-    width: 45%;
+    width:42%;
+}
+
+.mega-dropdown-menu-3c {
+    width:24%;
 }
 
 
-.head { width:50%;}
+.mega-dropdown-menu-4c {
+    width:22%;
+}
+
+.mega-dropdown-menu-5c {
+    width:31%;
+}
+.mega-dropdown-menu-6c {
+    width:30%;
+}
+.mega-dropdown-menu-7c {
+    width:35%;
+}
+
+
+ .head {width:50%;}
 
 
 .col-xs-15,
@@ -158,7 +195,7 @@ left: 45%;
     min-height: 1px;
     padding-right: 10px;
     padding-left: 10px;
-}
+} 
 
 
 .col-xs-15 {
@@ -208,7 +245,7 @@ left: 45%;
 	
 	
 	<div class="collapse navbar-collapse js-navbar-collapse">
-		<ul class="nav navbar-nav" width="50%">
+		<ul class="nav navbar-nav">
 			<li class="dropdown col-md-2  mega-dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">VEGETABLES</a>
 			
@@ -218,10 +255,11 @@ left: 45%;
 						<!-- <center>Vegetables</center> -->
 						<ul>
 						<!--  <li class="dropdown-header">Main Title </li> -->
-							<li><a href="showVegetable">Potatoes, Onions, Tomatoes</a></li>
-							<li><a href="showVegetable">Cucumber & Capsicum</a></li>
-							<li><a href="showVegetable">Cabbage, Cauliflower</a></li>
-							<li><a href="showVegetable">Beans, Brinjals, Okra</a></li>
+						
+							<li><a href="showFilterProductNames1/1">Potatoes, Oniones, Tomatoes</a></li>
+							<li><a href="showFilterProductNames1/2">Cucumber & Capsicum</a></li>
+							<li><a href="showFilterProductNames1/3">Cabbage, Cauliflower</a></li>
+							<li><a href="showFilterProductNames1/4">Beans, Brinjals, Okra</a></li>
 							
 							
 						</ul>
@@ -229,10 +267,10 @@ left: 45%;
 					<li class="col-sm-6">
 						<ul>
 							<!-- <li class="dropdown-header">Dresses</li> -->
-							<li><a href="showVegetable">Gourds, Pumpkins, Drumsticks</a></li>
-							<li><a href="showVegetable">Leafy Vegetables</a></li>
-							<li><a href="showVegetable">Root Vegetables</a></li>
-							<li><a href="showVegetable">Peas, Corn, Mushrooms</a></li>
+							<li><a href="showFilterProductNames1/5">Gourds, Pumpkins, Drumsticks</a></li>
+							<li><a href="showFilterProductNames1/1">Leafy Vegetables</a></li>
+							<li><a href="showFilterProductNames1/1">Root Vegetables</a></li>
+							<li><a href="showFilterProductNames1/1">Peas, Corn, Mushrooms</a></li>
 							
 						</ul>
 					</li>
@@ -242,15 +280,15 @@ left: 45%;
 			<li class="dropdown col-md-2 mega-dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">FRUITS</a>
 				
-				<ul class="dropdown-menu dropdown-menu-2 mega-dropdown-menu mega-dropdown-menu-2c row">
+				<ul class="dropdown-menu dropdown-menu-12 mega-dropdown-menu mega-dropdown-menu-7c row">
 				
 						<li class="col-sm-6">
 						<ul>
 							<!-- <li class="dropdown-header">Dresses</li> -->
-							<li><a href="showFruit">Banana, Guava, Sapota</a></li>
-							<li><a href="showFruit">Papaya, Pineapple, Pomegranate</a></li>
-							<li><a href="showFruit">Apples, Pears</a></li>
-							<li><a href="showFruit">Melon</a></li>
+							<li><a href="showFilterProductNames1/6">Banana, Guava, Sapota</a></li>
+							<li><a href="showFilterProductNames1/7">Papaya, Pineapple, Pomegranate</a></li>
+							<li><a href="showFilterProductNames1/8">Apples, Pears</a></li>
+							<li><a href="showFilterProductNames1/9">Melon</a></li>
 							
 						</ul>
 					</li>
@@ -258,10 +296,10 @@ left: 45%;
 					 <li class="col-sm-6">
 						<ul>
 							<!-- <li class="dropdown-header">Dresses</li> -->
-							<li><a href="showFruit">Oranges, Sweet Lime</a></li>
-							<li><a href="showFruit">Grapes, Berries, Cherries</a></li>
-							<li><a href="showFruit">Mangoes</a></li>
-							<li><a href="showFruit">Plums,Peaches</a></li>
+							<li><a href="showFilterProductNames1/10">Oranges, Sweet Lime</a></li>
+							<li><a href="showFilterProductNames1/11">Grapes, Berries, Cherries</a></li>
+							<li><a href="showFilterProductNames1/12">Mangoes</a></li>
+							<li><a href="showFilterProductNames1/13">Plums,Peaches</a></li>
 							
 						</ul>
 				
@@ -272,24 +310,24 @@ left: 45%;
 			<li class="dropdown col-md-2 mega-dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">SEEDS</a>
 				
-				<ul class="dropdown-menu dropdown-menu-3 mega-dropdown-menu mega-dropdown-menu-2c row">
+				<ul class="dropdown-menu dropdown-menu-14 mega-dropdown-menu mega-dropdown-menu-6c row">
 				
 						<li class="col-sm-6">
 						<ul>
 							<!-- <li class="dropdown-header">Dresses</li> -->
-							<li><a href="showSeed">Amaranth Seeds</a></li>
-							<li><a href="showSeed">Anise Seeds</a></li>
-							<li><a href="showSeed">Basil Seeds</a></li>
- 						    <li><a href="showSeed">Caraway Seeds</a></li>
+							<li><a href="showFilterProductNames1/14">Amaranth Seeds</a></li>
+							<li><a href="showFilterProductNames1/15">Anise Seeds</a></li>
+							<li><a href="showFilterProductNames1/16">Basil Seeds</a></li>
+ 						    <li><a href="showFilterProductNames1/17">Caraway Seeds</a></li>
 						</ul>
 					</li>
 					<li class="col-sm-6">
 						<ul>
 							<!-- <li class="dropdown-header">Dresses</li> -->
-							<li><a href="showSeed">Cardamom</a></li>
-							<li><a href="showSeed">Coriander seeds</a></li>
-							<li><a href="showSeed">Cumin seeds</a></li>
-							<li><a href="showSeed">Fenugreek Seeds</a></li>
+							<li><a href="showFilterProductNames1/18">Cardamom</a></li>
+							<li><a href="showFilterProductNames1/19">Coriander seeds</a></li>
+							<li><a href="showFilterProductNames1/20">Cumin seeds</a></li>
+							<li><a href="showFilterProductNames1/21">Fenugreek Seeds</a></li>
 							
 						</ul>
 					</li>
@@ -299,22 +337,22 @@ left: 45%;
 			<li class="dropdown col-md-2 mega-dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">FLOWERS</a>
 				
-				<ul class="dropdown-menu dropdown-menu-4 mega-dropdown-menu mega-dropdown-menu-2c row">
+				<ul class="dropdown-menu dropdown-menu-13 mega-dropdown-menu mega-dropdown-menu-5c row">
 						<li class="col-sm-6">
 						<ul>
-							<li><a href="showFlower">Rose,Marigold</a></li>
-							<li><a href="showFlower">Jasminum sambac</a></li>
-							<li><a href="showFlower">Periwinklee</a></li>
-							<li><a href="showFlower">Anona Hexapetala</a></li>
+							<li><a href="showFilterProductNames1/22">Rose,Marigold</a></li>
+							<li><a href="showFilterProductNames1/23">Jasminum sambac</a></li>
+							<li><a href="showFilterProductNames1/24">Periwinklee</a></li>
+							<li><a href="showFilterProductNames1/25">Anona Hexapetala</a></li>
 							
 						</ul>
 					</li>
 				
 					 <li class="col-sm-6">
 						<ul>
-							<li><a href="showFlower">Hibiscus</a></li>
-							<li><a href="showFlower">Cypress Vine</a></li>
-							<li><a href="showFlower">Mimusops elengi</a></li>
+							<li><a href="showFilterProductNames1/26">Hibiscus</a></li>
+							<li><a href="showFilterProductNames1/27">Cypress Vine</a></li>
+							<li><a href="showFilterProductNames1/28">Mimusops elengi</a></li>
 							<!-- <li><a href="showFlower">Auto Carousel</a></li> -->
 							
 						</ul>
@@ -324,23 +362,23 @@ left: 45%;
 			<li class="dropdown col-md-2 mega-dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">DRY FRUITS</a>
 				
-				<ul class="dropdown-menu dropdown-menu-4 mega-dropdown-menu mega-dropdown-menu-2c row">
+				<ul class="dropdown-menu dropdown-menu-15 mega-dropdown-menu mega-dropdown-menu-3c row">
 						<li class="col-sm-6">
 						<ul>
-							<li><a href="showDryfruit">Almonds</a></li>
-							<li><a href="showDryfruit">Cashew nut</a></li>
-							<li><a href="showDryfruit">Dates</a></li>
-							<li><a href="showDryfruit">Pistachio</a></li>
+							<li><a href="showFilterProductNames1/29">Almonds</a></li>
+							<li><a href="showFilterProductNames1/30">Cashew nut</a></li>
+							<li><a href="showFilterProductNames1/31">Dates</a></li>
+							<li><a href="showFilterProductNames1/32">Pistachio</a></li>
 							
 							
 						</ul>
 					</li>
 					<li class="col-sm-6">
 					<ul>
-					<li><a href="showDryfruit">Prunes</a></li>
-					<li><a href="showDryfruit">Fig</a></li>
-					<li><a href="showDryfruit">Walnuts</a></li>
-					<li><a href="showDryfruit">Dried Kiwi</a></li>
+					<li><a href="showFilterProductNames1/33">Prunes</a></li>
+					<li><a href="showFilterProductNames1/34">Fig</a></li>
+					<li><a href="showFilterProductNames1/35">Walnuts</a></li>
+					<li><a href="showFilterProductNames1/36">Dried Kiwi</a></li>
 					</ul>
 					</li>
 					</ul>
@@ -349,23 +387,23 @@ left: 45%;
 			<li class="dropdown col-md-2 mega-dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">CEREALS</a>
 				
-				<ul class="dropdown-menu dropdown-menu-4 mega-dropdown-menu mega-dropdown-menu-2c row">
+				<ul class="dropdown-menu dropdown-menu-16 mega-dropdown-menu mega-dropdown-menu-4c row">
 						<li class="col-sm-6">
 						<ul>
-							<li><a href="showCereals">Wheat</a></li>
-							<li><a href="showCereals">Maize</a></li>
-							<li><a href="showCereals">Millet</a></li>
-							<li><a href="showCereals">Ragi</a></li>
+							<li><a href="showFilterProductNames1/37">Wheat</a></li>
+							<li><a href="showFilterProductNames1/38">Maize</a></li>
+							<li><a href="showFilterProductNames1/39">Millet</a></li>
+							<li><a href="showFilterProductNames1/40">Ragi</a></li>
 							
 							
 						</ul>
 						</li>
 						<li class="col-sm-6">
 						<ul>
-						<li><a href="showCereals">Rice</a></li>
-						<li><a href="showCereals">Sorghum</a></li>
-						<li><a href="showCereals">Sago</a></li>
-						<li><a href="showCereals">Semolina</a></li>
+						<li><a href="showFilterProductNames1/41">Rice</a></li>
+						<li><a href="showFilterProductNames1/42">Sorghum</a></li>
+						<li><a href="showFilterProductNames1/43">Sago</a></li>
+						<li><a href="showFilterProductNames1/44">Semolina</a></li>
 						</ul>
 						
 						

@@ -34,6 +34,13 @@ public class ProductServiceImpl implements ProductService {
 	public List<Product> listProductByCategory(Product product, Integer offset, Integer maxResults) {
 		return productDAO.listProductByCategory(product,offset, maxResults);
 	}
+	
+	public List<Product>  listProductByProductNames(int refId, Integer offset, Integer maxResults) {
+		return productDAO. listProductByProductNames(refId,offset, maxResults);
+	}
+
+
+
 
 
 
@@ -45,4 +52,7 @@ public class ProductServiceImpl implements ProductService {
 
 	
 
+
+
+	
 }

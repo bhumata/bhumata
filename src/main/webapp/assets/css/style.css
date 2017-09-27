@@ -4,15 +4,10 @@ body{
 	margin:0;
 	font-family: 'OpenSans-Regular';
 	 background-color: #ffffff;
+	 
 }
 
 
-.navbar-default{
- background-color:#fff;
-  background-image:none;
-  border-color:transparent;
-  box-shadow:none;
-}
 
 .intro-header {
    margin:0px;
@@ -49,6 +44,8 @@ h5,
 h6 {
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+    margin:0px;
+    padding:0px;
 }
 
 .Group{
@@ -113,6 +110,9 @@ position:relative:
 .gallery-box:hover .gallery-box-caption {
     opacity: 1;
 }
+
+
+
 
 .gallery-box:hover img {
     -webkit-transform: scale(1.1);
@@ -264,7 +264,7 @@ min-height:400px;
 }
 
 #contact .form button[type="submit"]:hover {
-  background: #23c2e1;
+  
 }
 
 

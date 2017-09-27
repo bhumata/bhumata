@@ -167,7 +167,7 @@ h5 {
 }
 
 .mini-menu{
-    width: 200px;
+    width: 150px;
     border-radius: 3px;
     box-shadow:0 0 8px rgba(0, 0, 0, 0.06);
     overflow: hidden;
@@ -256,6 +256,27 @@ h5 {
     border-image: initial;
 }
 
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  
+   background-color: #white; /* Green */
+    border: 1px solid green;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    cursor: pointer;
+    width: 150px;
+    display: block;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+ input[type=submit]:hover {
+    background-color: #4CAF50;
+} 
+
 </style>
 </head>
 <body>
@@ -279,77 +300,51 @@ h5 {
         <div class="mini-menu">
             <ul>
         <li class="sub">
-            <a href="showFilterproductCategory"> Vegetables</a>
-            <!-- <ul>
-               <li><a href="#">Beans,Brinjals,okra</a></li>
-               <li><a href="#">cabbage,cauiliflower,broccoli</a></li>
-               <li><a href="#">cucumber and capcicum</a></li>
-               <li><a href="#">gourds,pumpkins,drumsticks</a></li>
-               <li><a href="#">leafy vegetables</a></li>
-               <li><a href="#">Peas,corn,mushrooms</a></li> 
-               <li><a href="#">root vegetables</a></li> 
-               <li><a href="#">potatoes,onions,tomatos</a></li> 
-            </ul>
- -->        </li>
+        <form name="form1" action="showFilterproductCategory">
+            <input type="submit" name="cname" value="Vegetables"></a>
+           </form>
+       </li>
+       <br>
         <li class="sub">
-            <a href="#">Fresh Fruits</a>
-            <ul>
-               <li><a href="#">Banana,Sapota,Guava</a></li>
-               <li><a href="#">Melon</a></li>
-               <li><a href="#">Mango</a></li>
-               <li><a href="#">Seasonal</a></li>
-               <li><a href="#">Grapes,Berries,Cherries</a></li>
-               <li><a href="#">Papaya,Pineapple,Pomegranate</a></li>
-               <li><a href="#">Oranges,Sweet Lime and other Citrus</a></li>
-               <li><a href="#">Apples,Peaches,Pears and Plums</a></li> 
-            </ul>
+          <form name="form1" action="showFilterproductCategory">
+            <input type="submit" name="cname" value="Fruits"></a> 
+       
+           <!--   <a href="showFilterproductCategory">Fresh Fruits</a> -->
+          </form> 
         </li>
+        <br>
         <li class="sub">
-            <a href="#">SEEDS</a>
-            <ul>
-                <li><a href="#">aaa</a></li>
-               <li><a href="#">bbb</a></li>
-               <li><a href="#">ccc</a></li>
-               <li><a href="#">ddd</a></li>
-               <li><a href="#">eee</a></li>
-               <li><a href="#">fff</a></li> 
-            </ul>
+        <form name="form1" action="showFilterproductCategory">
+            <input type="submit" name="cname" value="Seeds"></a> 
+        
+            <!-- <a href="#">SEEDS</a> -->
+            </form>
         </li>
+        <br>
         <li class="sub">
-            <a href="#">DRY-FRUITS</a>
-            <ul>
-            <li><a href="#">Almond</a></li>
-               <li><a href="#">Cashew Nut</a></li>
-               <li><a href="#">Dates</a></li>
-               <li><a href="#">Dried fig</a></li>
-               <li><a href="#">Raisin</a></li>
-               <li><a href="#">Walnut</a></li> 
-            </ul>
+        <form name="form1" action="showFilterproductCategory">
+            <input type="submit" name="cname" value="DryFruits"></a> 
+        
+             <!-- <a href="#">DRY-FRUITS</a> -->
+            </form>
         </li>
+        <br>
+        <li class="sub">
+        <form name="form1" action="showFilterproductCategory">
+            <input type="submit" name="cname" value="Cereals"></a> 
+        
+           <!--  <a href="#">Cereals</a>
+             -->
+             </form>
+        </li>
+        
     </ul>
         </div>
         
         <div class="menu-colors menu-item">
             <div class="header-item" >Quantity</div>
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+         
         </div>
         <div class="menu-price menu-item">
             <div class="header-item" >Price</div>
@@ -361,43 +356,97 @@ h5 {
         </div>
         
     </div>
- <div class="items">
+  <div class="items"> 
   
-        <div data-price="160" class="item">
-        <c:forEach items="${product}" var="product">
- 
-          <img src="<ui:image img='${product.productImg}'></ui:image>" alt="Image" />
+        <div data-price="160" class="item">  
+
+
+
+<table>
+
+        <c:forEach items="${product}" var="product" varStatus="rowCounter" >
+        <c:if test="${rowCounter.count % 4 == 1}">
+   
+        <tr>
+        </c:if>
+        
+         <td><br> <img src="<ui:image img='${product.productImg}'></ui:image>" alt="Image" /> <br/> ${rowCounter.count}<br><h3>${product.productName }</h3>
+         
+         <h5>Price:${product.price}</h5> 
+         
+         <select name="os0" id="os0">
+            <option value="1000">(1kg. approx 6,7 nos. Rs.160)</option>
+            <option value="250">250gm. approx 2,3 nos. Rs.40</option>
+            <option value="500">500gm. approx 4,5 nos. Rs.80</option>
+            <option value="1000">1kg. approx 6,7 nos. Rs.160</option>
+        </select>
+         
+            <!-- <div class="aa"> 
+           -->
+         <br>
+         <br>
+         Qty:<input type="text" name="qty" style="width: 40px;">
+        
+         	<button class="btn" qa="add" type="button" style="margin-left: 50px;">
+         	
+         	<strong style=" text-shadow: 1px 1px #fff;">Add to Cart </strong>
+         	</button>
+         	<!-- </div> -->
+         </td>
+         <c:if test="${rowCounter.count % 4 == 1||rowCounter.count == 4}">
+         
+         </c:if>
+         
           
-                <div class="info">
-                	 <p class="descroption">Fresho</p>
+         <%--  <div class="info">
+                	 <p class="descroption">Fresho</p> 
                     <h3>${product.productName }</h3>
                     
                     <h5>Price:${product.price}</h5>
-                    </c:forEach>
+             </td>      
+         	
                      <select name="os0" id="os0">
             <option value="1000">(1kg. approx 6,7 nos. Rs.160)</option>
             <option value="250">250gm. approx 2,3 nos. Rs.40</option>
             <option value="500">500gm. approx 4,5 nos. Rs.80</option>
             <option value="1000">1kg. approx 6,7 nos. Rs.160</option>
         </select>
+         --%>
+	
         
-         <div class="aa">
+        <!--  <div class="aa">
+          
          
-         Qty:<input type="text" name="qty" style="width: 30px;">
+         Qty:<input type="text" name="qty" style="width: 40px;">
         
          	<button class="btn" qa="add" type="button" style="margin-left: 50px;">
          	
          	<strong style=" text-shadow: 1px 1px #fff;">Add to Cart </strong>
          	</button>
+           
+            -->
+          
+          
+           
+                
          	
+         </c:forEach>
+         	</table>
          
          	</div>
-         	</div>
          	
-         	<div>
-      
+                </div>
+                
+        </div>
+   
+    
+        </div>    
+          
+        </div>
+  
+  
  <button class="loadmore">Load More</button>
-    </div>
+    
 </body>
 
     <!--<script
@@ -431,8 +480,8 @@ h5 {
     });
 </script>
 <script src="script.js" ></script>
-
-<script> 
+</html>
+<script>
     $( function() {
     $( "#slider-range" ).slider({
       range: true,
@@ -463,7 +512,5 @@ h5 {
 // } );
 </script>
 
+</body>
 </html>
-
-<!-- </body>
-</html> -->
