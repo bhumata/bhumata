@@ -1,6 +1,7 @@
 package com.bhumata.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
@@ -52,20 +53,29 @@ public class ProductController {
 			return "displayproduct";
 		}
 		
-		
+		// show products
+				@RequestMapping(value = "/showproduct_detail")
+				public String showproduct_detail()
+				{
+					return "product_detail";
+				}
+				
 		
 		//show product info
 		@RequestMapping(value = "/showdisplayproduct/{pId}")
 		public String showdisplayproduct(@PathVariable("pId") Long pId,Model model,HttpSession session)
-		{
-			System.out.println(pId);
-			
+		{	
 				Product product=new Product();
 				product.setpId(pId);
 				product=productService.getProduct(product);
-				System.out.println(product);
+				String cat=product.getProductCategory();
+				Product p=new Product();
+				p.setProductCategory(cat);
+				//List products=productService.listProductBySameCategory(p);
+				//System.out.println(products);
 				model.addAttribute("product",product);
-				return "displayproduct";
+				model.addAttribute("sameCategoryProduct",productService.listProductBySameCategory(p));
+				return "product_detail";
 		}
 		
 		

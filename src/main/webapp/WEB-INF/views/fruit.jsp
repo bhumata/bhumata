@@ -364,7 +364,7 @@ h5 {
   
         <div data-price="160" class="item">
         
-            <a href="showproductdetail/1"><img src="images/apple.jpg" alt="apple" class="img-item"></img></a>
+            <a href="showdisplayproduct/18"><img src="images/apple.jpg" alt="apple" class="img-item"></img></a>
             
                 <div class="info">
                 	 <p class="descroption">Fresho</p>
@@ -633,7 +633,7 @@ h5 {
                                  </div>
         </div>    
         
-        <div data-price="60" class="item">
+        <div data-price="15" class="item">
             <img src="images/image/mangos.png" alt="beans" class="img-item" ></img>
                 <div class="info">
                   <p class="descroption">Fresho</p>

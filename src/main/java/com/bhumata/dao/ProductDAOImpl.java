@@ -2,9 +2,12 @@ package com.bhumata.dao;
 
 import java.util.List;
 
+import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Criterion;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -63,5 +66,15 @@ public Product getProduct(Product product) {
 			List<Product> product1 = query.list();
 			return product1;
 			
-				}			
+				}
+
+		@SuppressWarnings("unchecked")
+		public List<Product> listProductBySameCategory(Product product) {
+			Session session=sessionFactory.openSession();
+			Criteria crit=session.createCriteria(Product.class);
+			Criterion c1=Restrictions.eq("productCategory", product.getProductCategory());
+			crit.add(c1);
+			List<Product> products=crit.list();
+			return products;
+		}			
 }

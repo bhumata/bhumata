@@ -35,6 +35,14 @@ public class ProductServiceImpl implements ProductService {
 		return productDAO.listProductByCategory(product,offset, maxResults);
 	}
 
+
+
+
+
+	public List<Product> listProductBySameCategory(Product product) {
+		return productDAO.listProductBySameCategory(product);
+	}
+
 	
 
 }

@@ -381,9 +381,7 @@ function myFunction() {
          </td>
          <td>
          	<button class="btn" qa="add" type="button"  style="margin-left: 65px;">
-         	<a href="showForm">
-         	<strong style=" text-shadow: 1px 1px #fff;">Add to Cart </strong>
-         	</a>
+         	<a href="showForm"><strong style=" text-shadow: 1px 1px #fff;">Add to Cart </strong></a>
          	</button> 
          	</tr></td>
          	</div>

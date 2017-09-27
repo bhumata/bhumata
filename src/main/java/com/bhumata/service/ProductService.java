@@ -13,7 +13,7 @@ public interface ProductService {
 	
 	public List<Product> listProductByName(Product product,Integer offset, Integer maxResults);
 	public List<Product> listProductByCategory(Product product,Integer offset, Integer maxResults);
-	
+	public List<Product> listProductBySameCategory(Product product );
 	
 	
 	
